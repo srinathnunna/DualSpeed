@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DualSpeed"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wi-Fi + Mobile Data Aggregated Downloader"
+            android:textSize="13sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Status Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvWifiStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wi-Fi: Checking..."
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvCellularStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Data (SIM): Checking..."
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💡 Note: Keep both Wi-Fi and Mobile Data turned ON on your phone."
+                android:textSize="12sp"
+                android:textColor="#616161" />
+        </LinearLayout>
+
+        <!-- Download Input -->
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter direct file URL (HTTP/HTTPS)"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="1dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSampleUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Sample Test File (10 MB)"
+            android:textSize="12sp"
+            android:backgroundTint="#78909C"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Start Dual Download"
+            android:textSize="16sp"
+            android:backgroundTint="#1976D2"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Progress and Speeds -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvSpeedWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wi-Fi Speed: 0.00 MB/s"
+            android:textSize="14sp"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvSpeedCellular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile SIM Speed: 0.00 MB/s"
+            android:textSize="14sp"
+            android:textColor="#E65100"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvSpeedTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combined Speed: 0.00 MB/s"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready."
+            android:textSize="13sp"
+            android:textColor="#616161" />
+
+    </LinearLayout>
+</ScrollView>
